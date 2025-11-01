@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zamów odbitki fotograficzne</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Zamów odbitki fotograficzne</h1>
+  </header>
+  <main>
+    <section class="upload-section">
+      <h2>Dodaj zdjęcia</h2>
+      <div class="drop-area" id="dropArea">
+        <p>Przeciągnij i upuść zdjęcia tutaj lub</p>
+        <button type="button" id="selectFiles">Dodaj zdjęcia</button>
+        <input type="file" id="fileInput" accept="image/*" multiple hidden />
+      </div>
+      <div id="photoList" class="photo-list"></div>
+    </section>
+
+    <section class="customer-section">
+      <h2>Dane kontaktowe</h2>
+      <form id="orderForm">
+        <div class="form-row">
+          <label for="customerName">Imię</label>
+          <input type="text" id="customerName" name="customerName" required />
+        </div>
+        <div class="form-row">
+          <label for="customerEmail">E-mail</label>
+          <input type="email" id="customerEmail" name="customerEmail" required />
+        </div>
+        <div class="form-row">
+          <label for="customerPhone">Telefon</label>
+          <input type="tel" id="customerPhone" name="customerPhone" required />
+        </div>
+        <div class="form-row checkbox-row">
+          <input type="checkbox" id="terms" required />
+          <label for="terms">Akceptuję regulamin</label>
+        </div>
+        <div class="total-row">
+          <span>Łączna cena:</span>
+          <strong id="totalPrice">0.00 zł</strong>
+        </div>
+        <button type="submit" class="submit-button">Wyślij zamówienie</button>
+      </form>
+    </section>
+
+    <section class="summary-section" id="summarySection" hidden>
+      <h2>Podsumowanie zamówienia</h2>
+      <div id="summaryDetails"></div>
+      <p class="thank-you" id="thankYouMessage"></p>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>

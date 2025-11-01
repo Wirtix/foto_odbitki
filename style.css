@@ -1,0 +1,196 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2933;
+  background-color: #f8fafc;
+}
+
+body {
+  margin: 0;
+  background: #f8fafc;
+}
+
+header {
+  background: linear-gradient(120deg, #5c6ac4, #b06ab3);
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem 4rem;
+}
+
+h1,
+h2 {
+  margin: 0 0 1rem;
+}
+
+.upload-section,
+.customer-section,
+.summary-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  margin-bottom: 2rem;
+}
+
+.drop-area {
+  border: 2px dashed #5c6ac4;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  color: #475569;
+  background: #f1f5f9;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.drop-area.dragover {
+  background: #e0e7ff;
+  border-color: #4338ca;
+}
+
+#selectFiles {
+  background: #5c6ac4;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background 0.2s ease;
+}
+
+#selectFiles:hover {
+  background: #4338ca;
+}
+
+.photo-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.photo-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-preview {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.photo-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.photo-info label {
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.photo-info select,
+.photo-info input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+  font-size: 0.95rem;
+}
+
+.photo-info .price {
+  font-weight: bold;
+  color: #1f2937;
+  text-align: right;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-row label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="tel"] {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+  font-size: 1rem;
+}
+
+.checkbox-row {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  margin: 1.5rem 0;
+}
+
+.submit-button {
+  background: #10b981;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+.submit-button:hover {
+  background: #059669;
+}
+
+.summary-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.summary-section li {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: inset 0 0 0 1px #e2e8f0;
+}
+
+.thank-you {
+  font-weight: 600;
+  color: #047857;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .drop-area {
+    padding: 1.5rem;
+  }
+
+  .photo-preview {
+    height: 180px;
+  }
+}
